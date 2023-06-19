@@ -30,8 +30,7 @@ public class GameFrame implements ActionListener {
         frame.setSize(800, 800);
         frame.getContentPane().setBackground(new Color(0x000000));
         frame.setLayout(new BorderLayout());
-        frame.setVisible(true);
-
+        
         // "Tic Tac Toe" Text
         text.setBackground(new Color(25, 25, 25));
         text.setForeground(Color.WHITE);
@@ -39,20 +38,19 @@ public class GameFrame implements ActionListener {
         text.setHorizontalAlignment(JLabel.CENTER);
         text.setText("O Turn");
         text.setOpaque(true);
-
+        
         // ******* PANEL STYLE START *******
-
-            // Panel where "Tic Tac Toe" text is placed
-            titlePanel.setLayout(new BorderLayout());
-            titlePanel.setBounds(0, 0, 800, 100);
-            titlePanel.add(text);
-
-            // Panel where the list of buttons are placed
-            buttonPanel.setLayout(new GridLayout(3, 3));
-            buttonPanel.setBackground(Color.WHITE);
-
+        
+        // Panel where "Tic Tac Toe" text is placed
+        titlePanel.setBounds(0, 0, 800, 100);
+        titlePanel.add(text);
+        
+        // Panel where the list of buttons are placed
+        buttonPanel.setLayout(new GridLayout(3, 3));
+        buttonPanel.setBackground(Color.WHITE);
+        
         // ******* PANEL STYLE END *******
-
+        
         // List of buttons
         for (int i = 0; i < buttons.length; i++) {
             
@@ -64,13 +62,14 @@ public class GameFrame implements ActionListener {
             
             // Adding to buttonPanel
             buttonPanel.add(buttons[i]);
-
+            
         }
-
+        
         // Adding to frame
         frame.add(titlePanel, BorderLayout.NORTH);
         frame.add(buttonPanel);
-
+        frame.setVisible(true);
+        
     }
 
     public void symbolColor(JButton button) {
