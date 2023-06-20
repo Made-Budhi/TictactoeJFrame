@@ -84,6 +84,9 @@ public class GameFrame implements ActionListener {
         }
     }
 
+    /**
+     * Override interface ActionListener's method
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
 
