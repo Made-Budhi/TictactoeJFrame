@@ -66,7 +66,6 @@ public class MenuFrame extends AbstractFrame implements ActionListener {
         this.frame.setVisible(true);
         
     }
-
     
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -82,10 +81,6 @@ public class MenuFrame extends AbstractFrame implements ActionListener {
             System.out.println("User Exit");
         }
 
-    }
-    
-    public static void main(String[] args) {
-        new MenuFrame();
     }
 
 }
