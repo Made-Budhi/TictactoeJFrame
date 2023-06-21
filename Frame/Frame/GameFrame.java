@@ -12,9 +12,9 @@ import java.awt.event.*;
 /**
  * Interface implemented.
  */
-public class GameFrame implements ActionListener {
+public class GameFrame extends AbstractFrame implements ActionListener {
 
-    JFrame frame = new JFrame();
+    // JFrame frame = new JFrame();
     JPanel titlePanel = new JPanel();
     JPanel buttonPanel = new JPanel();
     JLabel text = new JLabel();
@@ -26,10 +26,7 @@ public class GameFrame implements ActionListener {
     public GameFrame() {
 
         // Frame Styling
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 800);
-        frame.getContentPane().setBackground(new Color(0x000000));
-        frame.setLayout(new BorderLayout());
+        defaultFrame();
         
         // "Tic Tac Toe" Text
         text.setBackground(new Color(25, 25, 25));
@@ -66,9 +63,9 @@ public class GameFrame implements ActionListener {
         }
         
         // Adding to frame
-        frame.add(titlePanel, BorderLayout.NORTH);
-        frame.add(buttonPanel);
-        frame.setVisible(true);
+        this.frame.add(titlePanel, BorderLayout.NORTH);
+        this.frame.add(buttonPanel);
+        this.frame.setVisible(true);
         
     }
 
