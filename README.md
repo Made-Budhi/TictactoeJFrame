@@ -1,7 +1,6 @@
 # Tictactoe-JFrame
 Creating Tictactoe game with JFrame
 
-/**
  * Project untuk memenuhi tugas akhir semester 2
  * mata kuliah Pemrograman Berbasis Objek.
  * 
@@ -27,4 +26,3 @@ Creating Tictactoe game with JFrame
  *                  Frame/LoginFrame.java @line 110.
  * 
  * Encapsulation    Turn/TakeTurn.java
- */
