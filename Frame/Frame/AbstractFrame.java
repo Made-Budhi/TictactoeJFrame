@@ -8,7 +8,7 @@ import java.awt.*;
  */
 public abstract class AbstractFrame {
 
-    JFrame frame = new JFrame();
+    public JFrame frame = new JFrame();
 
     public void defaultFrame() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -2,11 +2,16 @@ package Winning;
 
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import Frame.GameFrame;
+import Frame.MenuFrame;
 
 public class WinCon {
     
-    public void checkWinning(JButton[] buttons, String symbol, JLabel text) {
+    public void checkWinning(JFrame gameFrame, JButton[] buttons, String symbol, JLabel text) {
 
         boolean draw = true;
 
@@ -21,6 +26,7 @@ public class WinCon {
                 
                 JButton[] winButton = {buttons[i], buttons[i+1], buttons[i+2]};
                 win(winButton, buttons, text, symbol); 
+                afterWin(gameFrame);
                 draw = false;
             }
 
@@ -36,6 +42,7 @@ public class WinCon {
                 
                 JButton[] winButton = {buttons[i], buttons[i+3], buttons[i+6]};
                 win(winButton, buttons, text, symbol);
+                afterWin(gameFrame);
                 draw = false; 
             }
         }
@@ -51,6 +58,7 @@ public class WinCon {
                 
                 JButton[] winButton = {buttons[i], buttons[4], buttons[8-i]};
                 win(winButton, buttons, text, symbol);
+                afterWin(gameFrame);
                 draw = false; 
             }
 
@@ -72,6 +80,7 @@ public class WinCon {
         // Will execute if draw = true
         if (draw) {
             draw(buttons, text);
+            afterWin(gameFrame);
         }
 
     }
@@ -100,6 +109,32 @@ public class WinCon {
         }
 
         text.setText("DRAW!");
+
+    }
+
+    public void afterWin(JFrame gameFrame) {
+
+        int answer = JOptionPane.showConfirmDialog
+        (gameFrame, "Game over, Play again?", "Game Over", JOptionPane.YES_NO_OPTION);
+
+        switch (answer) {
+
+            case 0:
+                gameFrame.dispose();
+                new GameFrame();
+            break;
+
+            case 1: 
+                gameFrame.dispose();
+                new MenuFrame();
+            break;
+
+            default:
+                gameFrame.dispose();
+                new MenuFrame();
+            break;
+
+        }
 
     }
 
