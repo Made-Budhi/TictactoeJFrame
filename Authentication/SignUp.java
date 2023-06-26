@@ -27,6 +27,12 @@ public class SignUp {
 
     }
 
+    /**
+     * Checking identical username from database
+     * 
+     * @param username
+     * @return
+     */
     public boolean identicUsername(String username) {
 
         boolean identic = false;
@@ -44,6 +50,12 @@ public class SignUp {
 
     }
 
+    /**
+     * Writing new account to database
+     * 
+     * @param username
+     * @param password
+     */
     public void addNewAccount(String username, String password) {
 
         try {

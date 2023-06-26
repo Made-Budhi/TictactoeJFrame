@@ -10,6 +10,12 @@ public class TakeTurn {
     private int turn = 0;
     private char currentSymbol;
 
+    /**
+     * Getter Symbol
+     * 
+     * @param text
+     * @return
+     */
     public char getCurrentSymbol(JLabel text) {
         if (turn % 2 == 0) {
             currentSymbol = 'O';
@@ -24,6 +30,11 @@ public class TakeTurn {
         return currentSymbol;
     }    
 
+    /**
+     * Setter Symbol
+     * 
+     * @param currentSymbol
+     */
     public void setCurrentSymbol(char currentSymbol) {
         this.currentSymbol = currentSymbol;
     }

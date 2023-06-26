@@ -99,9 +99,10 @@ public class LoginFrame extends AbstractFrame implements ActionListener {
 
     }
 
+    // Constructor Overloading
     public LoginFrame(String username, String password) {
 
-        new Authentication(username, password);
+        new Authentication(this.frame, username, password);
         
     }
 
@@ -113,7 +114,7 @@ public class LoginFrame extends AbstractFrame implements ActionListener {
             String username = this.usernameInput.getText();
             String password = String.valueOf(this.passwordInput.getPassword());
 
-            new Authentication(username, password);
+            new Authentication(this.frame, username, password);
 
         }
 
@@ -157,10 +158,6 @@ public class LoginFrame extends AbstractFrame implements ActionListener {
             System.exit(0);
         }
 
-    }
-
-    public static void main(String[] args) {
-        new LoginFrame();
     }
     
 }

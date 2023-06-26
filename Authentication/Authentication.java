@@ -1,5 +1,6 @@
 package Authentication;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import Frame.MenuFrame;
@@ -8,11 +9,12 @@ public class Authentication {
 
     GetDatabase database = new GetDatabase();
 
-    public Authentication(String username, String password) {
+    public Authentication(JFrame loginFrame, String username, String password) {
 
         boolean verified = validator(username, password);
 
         if (verified) {
+            loginFrame.dispose();
             new MenuFrame();
         } else {
             JOptionPane.showMessageDialog(null, "Incorrect Username or Password.");

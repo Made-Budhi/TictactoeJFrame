@@ -69,6 +69,11 @@ public class GameFrame extends AbstractFrame implements ActionListener {
         
     }
 
+    /**
+     * Set the symbol's color
+     * 
+     * @param button
+     */
     public void symbolColor(JButton button) {
         if (button.getText().equals("O")) {
 
@@ -99,7 +104,7 @@ public class GameFrame extends AbstractFrame implements ActionListener {
 
                         buttons[i].setText(symbol);
                         symbolColor(buttons[i]);
-                        win.checkWinning(buttons, symbol, text);
+                        win.checkWinning(this.frame, buttons, symbol, text);
 
                     } else {
 
